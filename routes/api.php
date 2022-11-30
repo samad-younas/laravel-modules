@@ -23,14 +23,6 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/list', 'list');
         Route::get('/status_act_inact/{id}', 'active_inactive');
     });
-    Route::controller(CategoryController::class)->prefix('/category')->group(function () {
-        Route::post('/save', 'store');
-        Route::post('/edit/{id}', 'edit');
-        Route::post('/update', 'update');
-        Route::get('/list', 'list');
-
-        Route::get('/remove/{id}', 'destroy');
-    });
 });
 
 Route::get('/home', [HomeController::class,'index'])->name('home');
