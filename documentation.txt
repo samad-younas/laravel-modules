@@ -1,0 +1,15 @@
+Objective => This branch has prepared to do Blog crud.All the routes,models and controller and databse functionality is integrated.
+
+Dependency=> This branch is dependent on two more branches. 1) category-crud , 2) Authentication.
+
+........Note start......
+
+The reason of dependency is ,the Product crud is demanding category and authentication functionality,
+For example:what if we want to assign category to blog?
+what if we want to add user id to that blog which is associated to loggedin user.
+So,These two functionalities can't acheive from this branch only,
+Thats why we have to merge above mentioned branches first.
+
+.......Note end.........
+
+How to use => 1) Go to main branch, 2) Open terminal and run this command "git merge category-crud && git merge Authentication" ,3) that's it,Now all the category-crud and Authentication branch code is merge to your project,Use it whereever you want,Good luck!
