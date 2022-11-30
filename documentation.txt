@@ -12,4 +12,4 @@ Thats why we have to merge above mentioned branches first.
 
 .......Note end.........
 
-How to use => 1) Go to main branch, 2) Open terminal and run this command "git merge category-crud && git merge Authentication" ,3) that's it,Now all the category-crud and Authentication branch code is merge to your project,Use it whereever you want,Good luck!
+How to use => 1) Go to main branch, 2) Open terminal and run these commands "git merge blog-crud && git merge category-crud && git merge Authentication" ,3) that's it,Now all the category-crud and Authentication branch code is merge to your project,Use it whereever you want,Good luck!
