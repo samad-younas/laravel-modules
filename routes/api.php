@@ -16,15 +16,14 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
-        Route::post('/save', 'store');
-        Route::get('/edit/{id}', 'edit');
-        Route::post('/update', 'update');
-        Route::get('/list', 'list');
-        Route::get('/status_act_inact/{id}', 'active_inactive');
-    });
 });
-
+Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
+    Route::post('/save', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/list', 'list');
+    Route::get('/status_act_inact/{id}', 'active_inactive');
+});
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('admin/home', [HomeController::class,'handleAdmin'])->name('admin.route')->middleware('admin');
 
