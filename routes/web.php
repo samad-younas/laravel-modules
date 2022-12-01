@@ -25,3 +25,5 @@ Route::controller(CategoryController::class)->prefix('/category')->group(functio
     Route::get('/remove/{id}', 'destroy');
 });
 
+
+
