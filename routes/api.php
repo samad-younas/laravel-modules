@@ -17,6 +17,3 @@ use App\Http\Controllers\CartController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/chat', [App\Http\Controllers\ChatsController::class, 'index']);
-Route::get('/messages', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
-Route::post('/messages', [App\Http\Controllers\ChatsController::class, 'sendMessage']);
