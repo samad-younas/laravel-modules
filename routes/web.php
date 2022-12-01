@@ -20,19 +20,3 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('admin/home', [HomeController::class,'handleAdmin'])->name('admin.route')->middleware('admin');
-Route::controller(CategoryController::class)->prefix('/category')->group(function () {
-    Route::post('/save', 'store');
-    Route::post('/edit/{id}', 'edit');
-    Route::post('/update', 'update');
-    Route::get('/list', 'list');
-    Route::get('/remove/{id}', 'destroy');
-});
-Route::controller(ProductController::class)->prefix('/product')->group(function () {
-    Route::post('/save', 'store');
-    Route::post('/update', 'update');
-    Route::get('/list', 'list');
-    Route::get('/remove/{id}', 'destroy');
-    Route::get('/edit/{id}', 'edit');
-    Route::get('/status_act_inact/{id}', 'active_inactive');
-});
-
