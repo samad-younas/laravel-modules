@@ -15,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::controller(ProductController::class)->prefix('/product')->group(function () {
-        Route::post('/save', 'store');
-        Route::post('/update', 'update');
-        Route::get('/list', 'list');
-        Route::get('/remove/{id}', 'destroy');
-        Route::get('/edit/{id}', 'edit');
-        Route::get('/status_act_inact/{id}', 'active_inactive');
-    });
+});
+Route::controller(ProductController::class)->prefix('/product')->group(function () {
+    Route::post('/save', 'store');
+    Route::post('/update', 'update');
+    Route::get('/list', 'list');
+    Route::get('/remove/{id}', 'destroy');
+    Route::get('/edit/{id}', 'edit');
+    Route::get('/status_act_inact/{id}', 'active_inactive');
 });
