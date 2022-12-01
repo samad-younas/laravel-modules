@@ -25,4 +25,3 @@ Route::controller(ProductController::class)->prefix('/product')->group(function 
     Route::get('/edit/{id}', 'edit');
     Route::get('/status_act_inact/{id}', 'active_inactive');
 });
-
