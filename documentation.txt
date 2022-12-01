@@ -1,5 +1,0 @@
-Objective => This branch has prepared to do Authentication.All the routes,models and controller and database functionality is integrated for both admin and user.
-
-Dependency=> This branch is not dependent on other branches
-
-How to use => 1) Go to main branch, 2) Open terminal and run these commands "git merge Authentication" ,"composer update","npm run dev" ,3) that's it,Now all the category-crud and Authentication branch code is merge to your project,Use it whereever you want,Good luck!
