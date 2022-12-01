@@ -27,9 +27,6 @@ Route::controller(CategoryController::class)->prefix('/category')->group(functio
     Route::get('/list', 'list');
     Route::get('/remove/{id}', 'destroy');
 });
-
-
-
 Route::controller(ProductController::class)->prefix('/product')->group(function () {
     Route::post('/save', 'store');
     Route::post('/update', 'update');
