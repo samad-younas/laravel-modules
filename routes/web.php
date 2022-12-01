@@ -18,4 +18,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
+    Route::post('/save', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/list', 'list');
+    Route::get('/status_act_inact/{id}', 'active_inactive');
+});
 
