@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::controller(CategoryController::class)->prefix('/category')->group(function () {
+    Route::post('/save', 'store');
+    Route::post('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/list', 'list');
+    Route::get('/remove/{id}', 'destroy');
+});
