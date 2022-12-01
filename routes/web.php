@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::controller(CategoryController::class)->prefix('/category')->group(function () {
     Route::post('/save', 'store');
-    Route::post('/edit/{id}', 'edit');
+    Route::get('/edit/{id}', 'edit');
     Route::post('/update', 'update');
     Route::get('/list', 'list');
     Route::get('/remove/{id}', 'destroy');
