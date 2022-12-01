@@ -24,6 +24,3 @@ Route::controller(CategoryController::class)->prefix('/category')->group(functio
     Route::get('/list', 'list');
     Route::get('/remove/{id}', 'destroy');
 });
-
-
-
