@@ -23,4 +23,3 @@ Route::controller(BlogController::class)->prefix('/blogs')->group(function () {
     Route::get('/list', 'list');
     Route::get('/status_act_inact/{id}', 'active_inactive');
 });
-
